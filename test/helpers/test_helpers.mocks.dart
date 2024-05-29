@@ -9,6 +9,9 @@ import 'dart:ui' as _i6;
 import 'package:flutter/material.dart' as _i4;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i3;
+import 'package:pockety/models/spending.dart' as _i8;
+import 'package:pockety/services/spendings_service/spendings_service.dart'
+    as _i7;
 import 'package:stacked_services/stacked_services.dart' as _i2;
 
 // ignore_for_file: type=lint
@@ -669,4 +672,20 @@ class MockDialogService extends _i1.Mock implements _i2.DialogService {
         ),
         returnValueForMissingStub: null,
       );
+}
+
+/// A class which mocks [SpendingsService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockSpendingsService extends _i1.Mock implements _i7.SpendingsService {
+  @override
+  _i5.Future<List<_i8.Spending>> getAllSpendings() => (super.noSuchMethod(
+        Invocation.method(
+          #getAllSpendings,
+          [],
+        ),
+        returnValue: _i5.Future<List<_i8.Spending>>.value(<_i8.Spending>[]),
+        returnValueForMissingStub:
+            _i5.Future<List<_i8.Spending>>.value(<_i8.Spending>[]),
+      ) as _i5.Future<List<_i8.Spending>>);
 }
