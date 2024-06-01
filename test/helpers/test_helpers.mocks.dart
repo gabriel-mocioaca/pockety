@@ -688,4 +688,15 @@ class MockSpendingsService extends _i1.Mock implements _i7.SpendingsService {
         returnValueForMissingStub:
             _i5.Future<List<_i8.Spending>>.value(<_i8.Spending>[]),
       ) as _i5.Future<List<_i8.Spending>>);
+
+  @override
+  _i5.Future<void> createSpending(_i8.Spending? spending) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #createSpending,
+          [spending],
+        ),
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
 }
