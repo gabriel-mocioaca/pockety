@@ -1,3 +1,4 @@
+import 'package:pockety/services/database.dart';
 import 'package:pockety/services/spendings_service/spendings_service_interface.dart';
 import 'package:pockety/ui/bottom_sheets/notice/notice_sheet.dart';
 import 'package:pockety/ui/dialogs/info_alert/info_alert_dialog.dart';
@@ -19,6 +20,7 @@ import 'package:pockety/services/spendings_service/spendings_service.dart';
     LazySingleton(classType: DialogService),
     LazySingleton(classType: NavigationService),
     LazySingleton(classType: SpendingsService, asType: SpendingsServiceInterface),
+    Singleton(classType: AppDatabase),
 
 // @stacked-service
   ],
